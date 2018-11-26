@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Black+Han+Sans" rel="stylesheet">
   <script src="js/main.js"></script>
   <title>Hello, world!</title>
 </head>
@@ -20,32 +20,56 @@
 </header>
 
 
-
+<section class = " game_background">
   <div id ="game">
   <div class="row ">
     <div class="col-5 box 1">
       <header>
-      <h1 id="yourmove"> You</h1>
-      <img id="yourImage" src="http://cdn.playbuzz.com/cdn/df3215be-e16c-4c54-86b0-5fa413f293bb/2e8f3fd4-4c65-405d-bb2d-b7cc49719d96.gif" height="1000px"/>
+      <h1> You</h1>
+      <img id="yourImage" src="http://cdn.playbuzz.com/cdn/df3215be-e16c-4c54-86b0-5fa413f293bb/2e8f3fd4-4c65-405d-bb2d-b7cc49719d96.gif"/>
     </header>
     <div class = "selection" >
-      <h2>Select your move</h2>
-      <button type="button" class="btn btn-dark" onclick="clickRock()">Rock</button>
-      <button type="button" class="btn btn-light" onclick="clickPaper()">Paper</button>
-      <button type="button" class="btn btn-danger" onclick="clickScissors()">Scissors</button>
+      <h2 id="yourmove">Select your move</h2>
+      <button type="button" class="btn btn-dark btn-lg " onclick="clickRock()">Rock</button>
+      <button type="button" class="btn btn-light btn-lg " onclick="clickPaper()">Paper</button>
+      <button type="button" class="btn btn-danger btn-lg " onclick="clickScissors()">Scissors</button>
     </div>
   </div>
     <div class = " center col-3">
+        <h2><span id="plays"></span></h2>
+
         <h2><span id="verdict"></span></h2>
+        <div class= "results">
+        <h1><span id="results"></span></h1>
+      </div>
+      <div class = "row">
+        <div class = "col-3">
+          <h2><span id="wins"></span></h2>
+
+          
+        </div>
+        <div class = "col-3">
+          <h2><span id="lose"></span></h2>
+        </div>
+        <div class= "col-3">
+          <h2><span id="draw"></span></h2>
+
+        </div>
+      </div>
+      
+
+
         
     </div>
 
-    <div class="col-4">
-      <h1>computer</h1>
-      <h1><span id="compmove"></span> </h1>
+    <div class="col-4 box2" >
+      <h1>Computer</h1>
 
       <img id="compImage" src="https://media1.tenor.com/images/841aeb9f113999616d097b414c539dfd/tenor.gif?itemid=5368357"
         alt="cat tapping on computer funny" />
+        <p></p>
+        
+        <h1><span id="compmove"></span> </h1>
 
       <!--close of col-6 -->
       <div>
@@ -55,13 +79,7 @@
     </div>
   </div>
   <!--close of row-->
-  <h1>Results</h1>
-
-  <h2><span id="plays"></span></h2>
-  <h2><span id="wins"></span></h2>
-  <h2><span id="lose"></span></h2>
-  <h2><span id="draw"></span></h2>
-
+  
 
 
 
@@ -83,7 +101,7 @@
           WINNER
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" onclick="reset()" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -102,7 +120,7 @@
           LOSER
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" onclick="reset()" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -121,13 +139,14 @@
           DRAW
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" onclick = "reset()" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 </div> <!--end of game id-->
 
+</section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

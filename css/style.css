@@ -2,7 +2,7 @@
 /* //////////////////////HEADER ////////////// */
 .title {
   text-align: center;
-  background-color: blueviolet;
+  background-color: #D4AF37;
   height: 150;
   padding: 50px;
   font-family: Black Han Sans;
@@ -15,43 +15,109 @@
 .title h3{
   font-size: 30px;
 }
-/* /////////////TITLE//////////////////////// */
-#yourmove{
+
+#compmove{
   font-size: 50px;
   padding:10px;
   padding-bottom:0px;
-
-  
-
+  font-family: Montserrat;
+  background-color: #D4AF37;
 }
 #yourImage {
   margin: 30px;
-  padding-left:80px;
   margin-top:20px;
-  height: 300px;
-  width: 300px
-  border: 5px solid red;
-
-
-
+  border-radius: 1%;
+  height:500px;
+  width: 500px;
 
 }
+img#yourImage{
+  margin-left: 100px;
+}
+#compImage{
+  
+  margin-top:30px;
+  width: 300px;
+  border-radius: 1%;
+  height:500px;
+  width: 500px;
+  
+  
+}
 /* //////////////middle////// */
+#verdict {
+  font-size: 80px;
+  font-family: Montserrat;
+  margin-top: 200px;
+  width: 200px;
+
+}
 .center{
-  background-color: green;
+  margin-top: 200px;
+
+}
+.results{
+  margin-top: 200px;
+  font-family: Montserrat;
+
+
 }
 /* ///////////box 1/////////////////////////// */
 .box1 h2 {
-  text-align: center
 
 }
 #yourmove{
   text-align: center;
+  font-size: 50px;
+  font-family: Montserrat;
+  background-color: #D4AF37;
+}
 }
 .box1 h2 {
 margin-left:50px;
 }
-.selection {
-  margin-left:250px;
 
+.selection {
+  text-align: center;
+
+
+
+}
+.selection button {
+  margin: 10px;
+
+}
+.box1 {
+  /* border: 5px solid red; */
+    font-size: 50px;
+    padding:10px;
+    padding-bottom:0px;
+    font-family: Montserrat;
+
+  
+}
+
+.box h1{
+  /* border: 5px solid red; */
+  font-size: 50px;
+  padding:10px;
+  padding-bottom:0px;
+  font-family: Montserrat;
+  text-align: center;
+}
+
+/* /////////box2/////////////// */
+.box2 h1 {
+  font-size: 50px;
+  padding-bottom:0px;
+  font-family: Montserrat;
+  text-align: center;
+}
+/* /////////middle////////// */
+
+.game_background{
+  background-image: url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1571726/1280/640/m1/fpnw/wm0/game_background_65-.jpg?1471607773&s=0ff18ff1ba29f749dfecf3bef75ab5ca");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

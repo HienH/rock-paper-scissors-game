@@ -5,7 +5,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//////setting global variables///////
+//////  global variables///////
 let yourMove = ""
 let compMove = ""
 let play = 0
@@ -14,10 +14,10 @@ let draw = 0
 let lose = 0
 let suddendeath = 0
 
-///////////YourMove function ///////////////
+///////////YourMove section ///////////////
 function clickRock() {
   document.getElementById('yourmove').innerHTML = "Rock";
-  document.getElementById('yourImage').src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRui2ODXoMmy6q83JIKcsi7Xjx8UiUZGL7xUn_HKDSZJfwwkkR_yyvjco8";
+  document.getElementById('yourImage').src = "https://vignette.wikia.nocookie.net/newdcmovieuniverse/images/6/68/Dwayne_Johnson_-_1.png/revision/latest?cb=20171108223907";
   yourMove = "Rock";
   compSelect();
   results()
@@ -65,37 +65,39 @@ function compSelect(yourMove) {
 
 //////////// Comparing and result function //////////////////
 function results() {
-  verdict = "LOSER"
+  verdict = "LOSE"
 
 
   if (yourMove == "Paper" && compMove == "Rock") {
-    verdict = "winner"
+    verdict = "WIN"
     win++
+
   }
   else if (yourMove == "Rock" && compMove == "Scissors") {
-    verdict = "winner"
+    verdict = "WIN"
     win++
   }
   else if (yourMove == "Scissors" && compMove == "Paper") {
-    verdict = "winner"
+    verdict = "WIN"
     win++
   }
   else if (yourMove == compMove) {
-    verdict = "draw"
+    verdict = "DRAW"
     draw++
   }
-  else if (verdict == "LOSER") {
+  else if (verdict == "LOSE") {
     lose++
+
   }
 
+  document.getElementById('results').innerHTML = "Results:";
   document.getElementById('plays').innerHTML = "PLAYS: " + play;
   document.getElementById('wins').innerHTML = "WINS: " + win;
   document.getElementById('lose').innerHTML = "LOSE: " + lose;
   document.getElementById('draw').innerHTML = "DRAWS: " + draw;
-
-
-
   document.getElementById('verdict').innerHTML = verdict;
+
+  
 
 
 
@@ -107,12 +109,10 @@ function results() {
       $('#loserModal').modal('show');
     }
     if (win == lose) {
-      suddendeath++
       $('#drawModal').modal('show');
 
     }
 
-    reset()
   }
 
 }
@@ -132,5 +132,13 @@ function reset() {
 }
 
 
+// function colorChangeWin(){
+//   document.getElementById("verdict").style.backgroundColor = "#228B22	"; // forecolor
+//   document.getElementById("verdict").style.color="white";
 
+// }
+function colorChangeLose(){
+  document.getElementById("verdict").style.backgroundcolor = "##e50000"; // forecolor
+}
+// }
 console.log("hello")
