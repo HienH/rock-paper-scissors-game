@@ -4,7 +4,9 @@
   text-align: center;
   background-color: blueviolet;
   height: 150;
-  padding: 50px
+  padding: 50px;
+  font-family: Black Han Sans;
+  
 }
 
 .title h1 {
@@ -13,7 +15,31 @@
 .title h3{
   font-size: 30px;
 }
+/* /////////////TITLE//////////////////////// */
+#yourmove{
+  font-size: 50px;
+  padding:10px;
+  padding-bottom:0px;
 
+  
+
+}
+#yourImage {
+  margin: 30px;
+  padding-left:80px;
+  margin-top:20px;
+  height: 300px;
+  width: 300px
+  border: 5px solid red;
+
+
+
+
+}
+/* //////////////middle////// */
+.center{
+  background-color: green;
+}
 /* ///////////box 1/////////////////////////// */
 .box1 h2 {
   text-align: center
@@ -21,4 +47,11 @@
 }
 #yourmove{
   text-align: center;
+}
+.box1 h2 {
+margin-left:50px;
+}
+.selection {
+  margin-left:250px;
+
 }
